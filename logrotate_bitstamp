@@ -1,0 +1,11 @@
+/mnt/data/bitstamp_logs/bitstamp-trade.log
+{
+    rotate 10000000000
+    minsize 10M
+    copytruncate
+    missingok
+    compress
+    postrotate
+        touch /mnt/data/bitstamp_logs/reload_log > /dev/null
+    endscript
+}
